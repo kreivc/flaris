@@ -90,7 +90,7 @@ For more details, see the guide on [Deploying to Cloudflare with Alchemy](https:
 ```
 flaris/
 ├── apps/
-│   ├── web/         # Frontend application (Next.js)
+│   ├── web/         # Frontend application [Vinext](https://github.com/cloudflare/vinext)
 │   └── server/      # Backend API (Hono, ORPC)
 ├── packages/
 │   ├── ui/          # Shared shadcn/ui components and styles
@@ -102,10 +102,4 @@ flaris/
 ## Available Scripts
 
 - `pnpm run dev`: Start all applications in development mode
-- `pnpm run build`: Build all applications
-- `pnpm run dev:web`: Start only the web application
-- `pnpm run dev:server`: Start only the server
-- `pnpm run check-types`: Check TypeScript types across all apps
-- `pnpm run db:push`: Push schema changes to database
-- `pnpm run db:generate`: Generate database client/types
-- `pnpm run check`: Run Oxlint and Oxfmt
+- `pnpm run check-all`: Check all lint & types error

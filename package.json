@@ -9,15 +9,9 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "check-types": "turbo check-types",
-    "dev:web": "turbo -F web dev",
-    "dev:server": "turbo -F server dev",
-    "db:push": "turbo -F @flaris/db db:push",
-    "db:generate": "turbo -F @flaris/db db:generate",
-    "deploy": "turbo -F @flaris/infra deploy",
-    "destroy": "turbo -F @flaris/infra destroy",
     "lint": "oxlint",
     "check": "oxlint && oxfmt --check",
+    "check-types": "turbo check-types",
     "check-all": "oxfmt --write && oxlint && turbo check-types"
   },
   "dependencies": {
