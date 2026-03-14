@@ -1,0 +1,30 @@
+{
+  "name": "@flaris/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@flaris/auth": "workspace:*",
+    "@flaris/db": "workspace:*",
+    "@flaris/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "dotenv": "catalog:",
+    "drizzle-orm": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@flaris/config": "workspace:*",
+    "hono": "catalog:",
+    "typescript": "^5"
+  }
+}

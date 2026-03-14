@@ -1,0 +1,3 @@
+{
+  "extends": "@flaris/config/tsconfig.base.json"
+}
