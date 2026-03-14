@@ -1,5 +1,8 @@
-import { cn } from "@flaris/ui/lib/utils";
+"use client";
+
 import * as React from "react";
+
+import { cn } from "@flaris/ui/lib/utils";
 
 function Label({ className, ...props }: React.ComponentProps<"label">) {
   return (

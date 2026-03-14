@@ -10,8 +10,12 @@
     }
   },
   "scripts": {
-    "db:push": "drizzle-kit push",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "DRIZZLE_LOCAL=true drizzle-kit migrate",
+    "db:migrate:prod": "drizzle-kit migrate",
+    "db:studio:local": "DRIZZLE_LOCAL=true drizzle-kit studio",
+    "db:studio:prod": "drizzle-kit studio",
+    "check-types": "tsc -b"
   },
   "dependencies": {
     "@flaris/env": "workspace:*",
@@ -23,6 +27,7 @@
   },
   "devDependencies": {
     "@flaris/config": "workspace:*",
+    "dotenv": "catalog:",
     "drizzle-kit": "^0.31.8",
     "typescript": "^5"
   }

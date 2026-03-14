@@ -9,7 +9,10 @@
       "default": "./src/*.ts"
     }
   },
-  "scripts": {},
+  "scripts": {
+    "check-types": "tsc -b",
+    "generate:schema": "dotenv -e ../../apps/server/.env -- pnpm dlx @better-auth/cli@latest generate --config ./src/index.ts --output ../db/src/schema/auth.ts --yes"
+  },
   "dependencies": {
     "@flaris/db": "workspace:*",
     "@flaris/env": "workspace:*",
@@ -19,6 +22,7 @@
   },
   "devDependencies": {
     "@flaris/config": "workspace:*",
+    "dotenv-cli": "^11.0.0",
     "typescript": "^5"
   }
 }

@@ -1,5 +1,6 @@
-import { cn } from "@flaris/ui/lib/utils";
 import * as React from "react";
+
+import { cn } from "@flaris/ui/lib/utils";
 
 function Card({
   className,

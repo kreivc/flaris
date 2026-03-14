@@ -16,7 +16,9 @@
     "db:generate": "turbo -F @flaris/db db:generate",
     "deploy": "turbo -F @flaris/infra deploy",
     "destroy": "turbo -F @flaris/infra destroy",
-    "check": "oxlint && oxfmt --write"
+    "lint": "oxlint",
+    "check": "oxlint && oxfmt --check",
+    "check-all": "oxfmt --write && oxlint && turbo check-types"
   },
   "dependencies": {
     "@flaris/env": "workspace:*",
