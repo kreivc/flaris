@@ -94,6 +94,7 @@ flaris/
 │   └── server/      # Backend API (Hono, ORPC)
 ├── packages/
 │   ├── ui/          # Shared shadcn/ui components and styles
+│   ├── infra/       # Infrastructure as code (IAC) all cloudflare
 │   ├── api/         # API layer / business logic
 │   ├── auth/        # Authentication configuration & logic
 │   └── db/          # Database schema & queries
