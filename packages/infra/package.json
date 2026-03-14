@@ -7,7 +7,8 @@
     "configure": "alchemy configure",
     "deploy:prod": "DEPLOY=true alchemy deploy",
     "deploy:stage": "DEPLOY=true alchemy deploy --stage",
-    "destroy:dangeroous": "alchemy destroy"
+    "destroy:dangerous": "alchemy destroy",
+    "create-cloudflare-token": "alchemy create-cloudflare-token"
   },
   "dependencies": {
     "dotenv": "catalog:"

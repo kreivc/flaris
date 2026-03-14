@@ -1,5 +1,5 @@
 import "@flaris/env/web";
-import type { NextConfig } from "next";
+import type { NextConfig } from "vinext";
 
 const nextConfig: NextConfig = {
   typedRoutes: true,

@@ -15,23 +15,17 @@
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
       "@/*": ["./src/*"],
-      "@flaris/ui/*": ["../../packages/ui/src/*"]
+      "@flaris/ui/*": ["../../packages/ui/src/*"],
+      "next": ["./node_modules/vinext/dist/shims/metadata"],
+      "next/headers": ["./node_modules/vinext/dist/shims/headers"],
+      "next/navigation": ["./node_modules/vinext/dist/shims/navigation"],
+      "next/link": ["./node_modules/vinext/dist/shims/link"],
+      "next/font/google": ["./node_modules/vinext/dist/shims/font-google"]
     },
     "types": ["@cloudflare/workers-types"]
   },
-  "include": [
-    "../server/env.d.ts",
-    "./next-env.d.ts",
-    "./**/*.ts",
-    "./**/*.tsx",
-    "./.next/types/**/*.ts"
-  ],
+  "include": ["../server/env.d.ts", "./vinext-env.d.ts", "./**/*.ts", "./**/*.tsx"],
   "exclude": ["./node_modules"]
 }

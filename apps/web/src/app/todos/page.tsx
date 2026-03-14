@@ -43,7 +43,7 @@ export default function TodosPage() {
     }),
   );
 
-  const handleAddTodo = (e) => {
+  const handleAddTodo = (e: React.FormEvent) => {
     e.preventDefault();
     if (newTodoText.trim()) {
       createMutation.mutate({ text: newTodoText });

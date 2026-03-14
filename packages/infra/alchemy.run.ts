@@ -1,5 +1,5 @@
 import alchemy from "alchemy";
-import { KVNamespace, Queue, Worker } from "alchemy/cloudflare";
+import { KVNamespace, Queue, Website, Worker } from "alchemy/cloudflare";
 import { D1Database } from "alchemy/cloudflare";
 import { config } from "dotenv";
 
@@ -66,6 +66,21 @@ export const server = await Worker("server", {
   },
 });
 
+export const web = await Website("web", {
+  name: `${app.name}-${stage}-web`,
+  adopt: true,
+  cwd: "../../apps/web",
+  build: "pnpm vinext build",
+  entrypoint: "dist/server/index.js",
+  noBundle: true,
+  assets: "dist/client",
+  compatibility: "node",
+  dev: {
+    command: "pnpm vinext dev --port 3001",
+  },
+});
+
 console.log(`Server -> ${server.url}`);
+console.log(`Web -> ${web.url}`);
 
 await app.finalize();
